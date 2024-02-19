@@ -19,7 +19,10 @@ def index():
     exemplo_data = cur.fetchall()
     cur.close()
     conn.close()
-    return str(exemplo_data)
+    
+    # Construindo uma lista HTML para visualização no navegador
+    items = '<br>'.join([f"{row[0]}, {row[1]}, {row[2]}, {row[3]}" for row in exemplo_data])
+    return f"<html><body>{items}</body></html>"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
