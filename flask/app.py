@@ -15,11 +15,11 @@ def get_db_connection():
 def index():
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute('SELECT * FROM teste;')
-    teste_data = cur.fetchall()
+    cur.execute('SELECT * FROM exemplo;')
+    exemplo_data = cur.fetchall()
     cur.close()
     conn.close()
-    return str(teste_data)
+    return str(exemplo_data)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
