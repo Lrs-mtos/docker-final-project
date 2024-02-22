@@ -1,6 +1,10 @@
 # Projeto Docker Flask-psql
 
-Este projeto consiste em uma aplicação web simples desenvolvida com Flask, que se conecta a um banco de dados PostgreSQL. A aplicação permite aos usuários visualizar e adicionar registros a uma tabela exemplo, que contém informações sobre diversos itens.
+Este projeto consiste em uma aplicação web simples desenvolvida com Flask, que se conecta a um banco de dados PostgreSQL. A aplicação permite aos usuários visualizar e adicionar registros a uma tabela exemplo, que contém informações sobre diversos itens. A configuração e execução do serviço é feita utilizando Docker.
+
+<img src="https://flask.palletsprojects.com/en/3.0.x/_images/flask-horizontal.png" width="100" alt="Flask"> <img src="https://cdn.icon-icons.com/icons2/2415/PNG/512/postgresql_original_wordmark_logo_icon_146392.png" width="100" alt="PostgreSQL"> <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_docker_icon_130643.png" width="100" alt="Docker">
+
+
 
 ## Pré-Requisitos
 
