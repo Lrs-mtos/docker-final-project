@@ -7,6 +7,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+    restart: always
     env_file:
       - ./config/var.env
     networks:
@@ -19,13 +20,14 @@ services:
       - db
     ports:
       - "5000:5000"
+    restart: always
     env_file:
       - ./config/var.env
     networks:
       - rede
 
 networks:
-  rede:
+  rede: {}
 
 volumes:
-  postgres_data:
+  postgres_data: {}
