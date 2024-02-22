@@ -2,28 +2,25 @@ version: '3.8'
 services:
   db:
     build: ./db
-    environment:
-      POSTGRES_DB: meu_banco_de_dados
-      POSTGRES_USER: usuario
-      POSTGRES_PASSWORD: senha
+    container_name: meu_banco_de_dados
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+    env_file:
+      - ./config/var.env
     networks:
       - rede
 
   app:
     build: ./flask
+    container_name: minha_api_flask
     depends_on:
       - db
-    environment:
-      DATABASE_HOST: db
-      DATABASE_USER: usuario
-      DATABASE_PASSWORD: senha
-      DATABASE_NAME: meu_banco_de_dados
     ports:
       - "5000:5000"
+    env_file:
+      - ./config/var.env
     networks:
       - rede
 
